@@ -13,17 +13,6 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::create([
-            'category'=> 'Perikanan'
-        ]);
-        Category::create([
-            'category'=> 'Pertanian'
-        ]);
-        Category::create([
-            'category'=> 'Kuliner'
-        ]);
-        Category::create([
-            'category'=> 'Kerajinan'
-        ]);
+       
     }
 }

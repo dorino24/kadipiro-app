@@ -15,7 +15,7 @@
             <h3 class="fw-bold">ST<u class="fs-3" style="text-underline-offset:15px ;text-decoration-color:#5F8D4E">RUKTUR ORGANISA</u>SI
             </h3>
             <div class="my-4">
-                
+                <br><img class="struktur" src="img/struktur.png" style="width: 100%" alt="struktur">
             </div>
         </div>
 
@@ -23,7 +23,7 @@
         <div class="row my-5 hideme">
             <h3 class="fw-bold">PE<u class="fs-3" style="text-underline-offset:15px ;text-decoration-color:#5F8D4E">LAYANAN DE</u>SA
             </h3>
-            
+
             <ul class="ms-3 my-4">
                 <li>KTP EI</li>
                 <li>KIA</li>

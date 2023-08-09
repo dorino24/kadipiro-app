@@ -71,6 +71,9 @@ class PostController extends Controller
             'judul' => 'required|max:255|unique:posts',
             // Unik dari tabel posts
             'category_id' => 'required',
+            'harga' => 'required',
+            'nomor' => 'required',
+            'alamat' => 'required',
             'image' => 'image|file|max:4096|required',
             'image2' => 'image|file|max:4096|required',
             'image3' => 'image|file|max:4096|required',
@@ -135,6 +138,9 @@ class PostController extends Controller
         $rules = [
             'judul' => 'required|max:255',
             'category_id' => 'required',
+            'harga' => 'required',
+            'nomor' => 'required',
+            'alamat' => 'required',
             'image' => 'image|file|max:4096',
             'image2' => 'image|file|max:4096',
             'image3' => 'image|file|max:4096',

@@ -12,7 +12,7 @@
                 <div class="mb-3">
                     <label for="judul" class="form-label @error('judul') is-invalid @enderror"> judul </label>
                     <input type="text" class="form-control" id="judul" name="judul" required autofocus
-                        value="{{ old('title', $post->judul) }}">
+                        value="{{ old('judul', $post->judul) }}">
                     @error('judul')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -29,6 +29,31 @@
                             @endif
                         @endforeach
                     </select>
+                </div>
+                <div class="mb-3">
+                    <label for="harga" class="form-label @error('harga') is-invalid @enderror"> Harga (Rupiah) </label>
+                    <input type="text" class="form-control" id="harga" name="harga" required autofocus
+                        value="{{ old('harga', $post->harga) }}">
+                    @error('judul')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div><div class="mb-3">
+                    <label for="nomor" class="form-label @error('nomor') is-invalid @enderror"> Nomor </label>
+                    <div class="form-control border border-0 p-0">
+                        <input type="number" disabled value="+62" placeholder="+62" style="width: 11%">
+                        <input type="number" class="form-control" style="width:88%; display: inline;" id="nomor"
+                            name="nomor" required autofocus value="{{ old('nomor', $post->nomor)}}">
+                    </div>
+                    @error('nomor')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div><div class="mb-3">
+                    <label for="alamat" class="form-label @error('alamat') is-invalid @enderror"> Alamat </label>
+                    <input type="text" class="form-control" id="alamat" name="alamat" required autofocus
+                        value="{{ old('alamat', $post->alamat) }}">
+                    @error('alamat')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label @error('image') is-invalid @enderror">Thumbnail </label>

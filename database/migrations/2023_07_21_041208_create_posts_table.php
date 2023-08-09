@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('short')->unique();
             $table->text('isi');
             $table->text('excerpt');
+            $table->string('harga');
+            $table->bigInteger('nomor');
+            $table->string('alamat');
             $table->string('image');
             $table->string('image2');
             $table->string('image3');

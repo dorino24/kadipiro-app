@@ -11,14 +11,23 @@
         </div>
     </div>
     <div class="container">
-        <div class="space hideme">
-            <div class="mx-auto px-5">
+        <div class="row space hideme">
+            <div class="mx-auto px-5 col-8">
                 <h2 class="fw-bold text-center">{{ $post->judul }}</h2>
                 <p>{!! $post->isi !!}
                 </p>
-                <a href="'http://google.com'.{{$post->nomer}}">
+                <a href="https://wa.me/{{$post->nomor}}">
                   <img src="{{asset('img/logos_whatsapp-icon.png')}}" width="40" alt="">
                 </a>
+            </div>
+            <div class="mx-auto px-5 col-4 ">
+                <h2 class="fw-bold text-center">KETERANGAN</h2>
+                <dl>
+                  <dt><li>Harga</li></dt>
+                  <dd class="ps-4">{{$post->harga}}</dd>
+                  <dt><li>Alamat</li> </dt>
+                  <dd class="ps-4">{{$post->alamat}}</dd>
+                </dl>
             </div>
         </div>
         {{-- <img src="../img/kayu.png" alt=""> --}}

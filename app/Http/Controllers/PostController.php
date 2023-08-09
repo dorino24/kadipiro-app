@@ -71,17 +71,33 @@ class PostController extends Controller
             'judul' => 'required|max:255|unique:posts',
             // Unik dari tabel posts
             'category_id' => 'required',
-            'image' => 'image|file|max:4096',
-            'image2' => 'image|file|max:4096',
-            'image3' => 'image|file|max:4096',
+            'image' => 'image|file|max:4096|required',
+            'image2' => 'image|file|max:4096|required',
+            'image3' => 'image|file|max:4096|required',
+            'image4' => 'image|file|max:4096',
+            'image5' => 'image|file|max:4096',
+            'image6' => 'image|file|max:4096',
             'isi' => 'required'
         ]);
         $postValidated['short'] = str_replace(' ', '-', $request->judul);
         if ($request->file('image')) {
             $postValidated['image'] = $request->file('image')->store('post-images');
-            $postValidated['image2'] = $request->file('image2')->store('post-images');
-            $postValidated['image3'] = $request->file('image3')->store('post-images');
         }
+        if ($request->file('image2')) {
+            $postValidated['image2'] = $request->file('image2')->store('post-images');
+         }
+        if ($request->file('image3')) {
+            $postValidated['image3'] = $request->file('image3')->store('post-images');
+         }
+        if ($request->file('image4')) {
+            $postValidated['image4'] = $request->file('image4')->store('post-images');
+         }
+        if ($request->file('image5')) {
+            $postValidated['image5'] = $request->file('image5')->store('post-images');
+         }
+        if ($request->file('image6')) {
+            $postValidated['image6'] = $request->file('image6')->store('post-images');
+         }
 
         // $postValidated['user_id'] = auth()->user()->id;
         $postValidated['excerpt'] = Str::limit(strip_tags($request->isi), 150);
@@ -122,6 +138,9 @@ class PostController extends Controller
             'image' => 'image|file|max:4096',
             'image2' => 'image|file|max:4096',
             'image3' => 'image|file|max:4096',
+            'image4' => 'image|file|max:4096',
+            'image5' => 'image|file|max:4096',
+            'image6' => 'image|file|max:4096',
             'isi' => 'required'
         ];
         $postValidated = $request->validate($rules);
@@ -137,13 +156,32 @@ class PostController extends Controller
                 Storage::delete($post->image2);
             }
             $postValidated['image2'] = $request->file('image2')->store('post-images');
-        } if ($request->file('image3')) {
+        } 
+        if ($request->file('image3')) {
             if ($post->image3) {
                 Storage::delete($post->image3);
             }
             $postValidated['image3'] = $request->file('image3')->store('post-images');
         }
-        $postValidated['excerpt'] = Str::limit(strip_tags($request->body), 250);
+        if ($request->file('image4')) {
+            if ($post->image4) {
+                Storage::delete($post->image4);
+            }
+            $postValidated['image4'] = $request->file('image4')->store('post-images');
+        }
+        if ($request->file('image5')) {
+            if ($post->image5) {
+                Storage::delete($post->image5);
+            }
+            $postValidated['image5'] = $request->file('image5')->store('post-images');
+        }
+        if ($request->file('image6')) {
+            if ($post->image6) {
+                Storage::delete($post->image6);
+            }
+            $postValidated['image6'] = $request->file('image6')->store('post-images');
+        }
+        $postValidated['excerpt'] = Str::limit(strip_tags($request->isi), 250);
 
         Post::where('id', $post->id)->update($postValidated);
         return redirect('/dashboard')->with('success', 'Berhasil mengubah artikel');

@@ -15,12 +15,16 @@
 </head>
 
 <body>
-
-    <div class="d-flex justify-content-center py-5 my-5">
-
-        <div class="card mb-3 px-2 justify-content-center" style="width: 30rem; margin-top: 8em" >
+    <div class="d-flex justify-content-center py-5 my-5 ">
+        <div class="card mb-3 px-2 justify-content-center" style="width: 30rem; margin-top: 8em">
             <div class="card-body">
                 <h3 class="card-title text-center my-3 fw-bold">ADMIN DESA KADIPIRO</h3>
+                @if (session()->has('error'))
+                    <div class="alert alert-danger alert-dismissible fade show mx-auto"
+                         role="alert">
+                        {{ session('error') }}
+                    </div>
+                @endif
                 <form action="/login" method="POST">
                     @csrf
                     <div class="form-group py-2">

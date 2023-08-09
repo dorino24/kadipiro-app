@@ -58,6 +58,46 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
+
+                <div class="mb-3">
+                    <label for="image4" class="form-label @error('image4') is-invalid @enderror">Image 4 </label>
+                    @if ($post->image4)
+                        <img src="{{ asset('storage/' . $post->image4) }}"
+                            class="img-preview4 img-fluid mb-2 col-sm-5 d-block">
+                    @endif
+                    <input class="form-control @error('image4') is-invalid @enderror" type="file" id="image4"
+                        name="image4" onchange="previewImage('#image4','.img-preview4')">
+                    @error('image4')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="mb-3">
+                    <label for="image5" class="form-label @error('image5') is-invalid @enderror">Image 5 </label>
+                    @if ($post->image5)
+                        <img src="{{ asset('storage/' . $post->image5) }}"
+                            class="img-preview5 img-fluid mb-2 col-sm-5 d-block">
+                    @endif
+                    <input class="form-control @error('image5') is-invalid @enderror" type="file" id="image5"
+                        name="image5" onchange="previewImage('#image5','.img-preview5')">
+                    @error('image5')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="mb-3">
+                    <label for="image6" class="form-label @error('image6') is-invalid @enderror">Image 6 </label>
+                    @if ($post->image6)
+                        <img src="{{ asset('storage/' . $post->image6) }}"
+                            class="img-preview6 img-fluid mb-2 col-sm-5 d-block">
+                    @endif
+                    <input class="form-control @error('image6') is-invalid @enderror" type="file" id="image6"
+                        name="image6" onchange="previewImage('#image6','.img-preview6')">
+                    @error('image6')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+              
+
+                
                 <div class="mb-3">
                     <label for="isi" class="form-label"> isi </label>
                     @error('isi')

@@ -18,9 +18,12 @@ return new class extends Migration
             $table->string('short')->unique();
             $table->text('isi');
             $table->text('excerpt');
-            $table->string('image')->nullable();
-            $table->string('image2')->nullable();
-            $table->string('image3')->nullable();
+            $table->string('image');
+            $table->string('image2');
+            $table->string('image3');
+            $table->string('image4')->nullable();
+            $table->string('image5')->nullable();
+            $table->string('image6')->nullable();
             $table->timestamps();
         });
     }

@@ -27,9 +27,9 @@
         </ul>
         @if (auth()->check())
             <a href="/dashboard">Dashboard</a>
-            <form action="/logout" method="post">
+            <form action="/logout" method="post" class="ps-5">
                 @csrf
-                <button type="submit">Sign Out</button>
+                <button class="border border-0 rounded-3 bg-danger text-light" type="submit">Sign Out</button>
             </form>
         @else
             <a href="/login">Login Admin</a>

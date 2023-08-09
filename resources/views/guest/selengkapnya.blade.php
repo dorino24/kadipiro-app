@@ -12,15 +12,14 @@
     </div>
     <div class="container">
         <div class="row space hideme">
-            <div class="mx-auto px-5 col-8">
+            <div class="mx-auto px-5 col-8 mb-3">
                 <h2 class="fw-bold text-center">{{ $post->judul }}</h2>
-                <p>{!! $post->isi !!}
-                </p>
+                <div class="isipost">{!! $post->isi !!}</div>
                 <a href="https://wa.me/{{$post->nomor}}">
                   <img src="{{asset('img/logos_whatsapp-icon.png')}}" width="40" alt="">
                 </a>
             </div>
-            <div class="mx-auto px-5 col-4 ">
+            <div class="mx-auto px-5 col-8 col-lg-4 ">
                 <h2 class="fw-bold text-center">KETERANGAN</h2>
                 <dl>
                   <dt><li>Harga</li></dt>

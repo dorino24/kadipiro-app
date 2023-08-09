@@ -326,3 +326,7 @@ th {
   opacity:1!important;
   transition: all 1s ease; 
 }
+
+.isipost>div{
+    text-align: justify;
+}

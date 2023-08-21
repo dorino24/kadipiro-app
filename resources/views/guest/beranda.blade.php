@@ -25,7 +25,7 @@
     <div class="container">
         <div class="row space hideme">
             <div class="col-6 align-self-center">
-                <img src="img/fotokkn.png" alt="" width="100%">
+                <img src="img/desa.jpg" alt="" width="100%">
             </div>
             <div class="col-6 p-5 align-self-center">
                 <h3 class="fw-bold">DESA KADIPIRO</h3>
@@ -72,7 +72,7 @@
                    </button>
                </a>
             </div>
-            
+
         </div>
 
     </div>

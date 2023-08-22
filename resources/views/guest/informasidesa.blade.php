@@ -4,7 +4,7 @@
 @section('content')
     <div class="judul">
 
-        <div class="jumbotron" style="background-image: url('../img/jumbotron.png');">
+        <div class="jumbotron" style="background-image: url('../img/sungai.JPG');">
         </div>
         <div class="overlay">
             <h2 class="fw-bold ">INFORMASI DESA KADIPIRO</h2>

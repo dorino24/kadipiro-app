@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="col-6 p-0">
-                <div class="jumbotron-kanan" style="background-image: url('../img/lele.png')";>
+                <div class="jumbotron-kanan" style="background-image: url('../img/komoditas.png')";>
                 </div>
             </div>
         </div>

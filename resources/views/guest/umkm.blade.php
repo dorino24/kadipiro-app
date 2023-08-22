@@ -26,21 +26,25 @@
         <div class="kotak-krem hideme">
             <h1 class="fw-bold text-center py-4">KULINER</h1>
         </div>
-        <div class="container d-flex flex-wrap my-5 justify-content-start hideme">
-            @foreach ($kuliner as $post)
-                <div class="card m-5" style="max-width:350px; border-radius:15px; ">
-                    <img src={{ asset('storage/'.$post->image) }} style=" object-fit: cover;height:250px" class="card-img-top" alt="kuliner">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-center">{{ $post->judul }}</h4>
-                        <p class="card-text">{{ $post->excerpt }}</p>
-                        <div style="text-align: right" >
-                            <a href="/artikel/{{$post->short}}" class="btn"
-                                style="background-color:
-                      #5F8D4E; color:white; border-radius: 15px;max-width:50%">Selengkapnya</a>
+        <div class="container my-5 hideme">
+            <div class="row">
+                @foreach ($kuliner as $post)
+                    <div class="col-md-4 my-5 px-4">
+                        <div class="card p-0  h-100" style=" border-radius:15px; ">
+                            <img src="{{ asset('storage/' . $post->image) }}"
+                                style=" object-fit: cover;height:250px;width:100%" class="card-img-top" alt="perikanan">
+                            <div class="card-body">
+                                <h4 class="card-title fw-bold text-center">{{ $post->judul }}</h4>
+                                <p class="card-text">{{ $post->excerpt }}</p>
+                                <div style="text-align: right">
+                                    <a href="/artikel/{{ $post->short }}" class="btn"
+                                        style="background-color:#5F8D4E; color:white; border-radius: 15px">Selengkapnya</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </div>
 
@@ -49,21 +53,25 @@
         <div class="kotak-krem hideme">
             <h1 class="fw-bold text-center py-4">KERAJINAN</h1>
         </div>
-        <div class="container d-flex flex-wrap my-5 justify-content-start hideme">
-            @foreach ($kerajinan as $post)
-                <div class="card m-5" style="max-width: 350px; border-radius:15px; ">
-                    <img src={{ asset('storage/'.$post->image) }} style=" object-fit: cover;height:250px" class="card-img-top" alt="kerajinan">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bolder text-center">{{ $post->judul }}</h4>
-                        <p class="card-text">{{ $post->excerpt }}</p>
-                        <div style="text-align: right">
-                            <a href="/artikel/{{$post->short}}" class="btn"
-                                style="background-color:
-                      #5F8D4E; color:white; border-radius: 15px">Selengkapnya</a>
+        <div class="container my-5 ">
+            <div class="row">
+                @foreach ($kerajinan as $post)
+                    <div class="col-md-4 my-5 px-4">
+                        <div class="card p-0  h-100" style=" border-radius:15px; ">
+                            <img src="{{ asset('storage/' . $post->image) }}"
+                                style=" object-fit: cover;height:250px;width:100%" class="card-img-top" alt="perikanan">
+                            <div class="card-body">
+                                <h4 class="card-title fw-bold text-center">{{ $post->judul }}</h4>
+                                <p class="card-text">{{ $post->excerpt }}</p>
+                                <div style="text-align: right">
+                                    <a href="/artikel/{{ $post->short }}" class="btn"
+                                        style="background-color:#5F8D4E; color:white; border-radius: 15px">Selengkapnya</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
 
     </div>
@@ -74,11 +82,12 @@
             <div class="row justify-content-center my-5">
                 <div class="col-6 px-5 align-self-center" style="max-width: 90%">
                     <h2 class="text-center fw-bold">KULINER</h2>
+                    {{-- <iframe src="https://www.google.com/maps/d/embed?mid=1W3pJSfKSkN210w9F3R4S6-ykieq0DN0&ehbc=2E312F" width="640" height="480"></iframe> --}}
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15822.567433307695!2d111.07704524068602!3d-7.504730830123148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1dfa259173b7%3A0x5027a76e355b4e0!2sKadipiro%2C%20Kec.%20Sambirejo%2C%20Kabupaten%20Sragen%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1689940957284!5m2!1sid!2sid"
+                        src="https://www.google.com/maps/d/embed?mid=1W3pJSfKSkN210w9F3R4S6-ykieq0DN0&ehbc=2E312F"
                         width="100%" height="400" style="border:1px solid black;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <a href="https://goo.gl/maps/Fo3eA67Yw27cmP5P6" target="_blank">
+                    <a href="https://www.google.com/maps/d/u/0/edit?mid=1W3pJSfKSkN210w9F3R4S6-ykieq0DN0&usp=sharing" target="_blank">
                         <button class="btn-bukapeta">
                             Buka Peta
                         </button>
@@ -87,10 +96,10 @@
                 <div class="col-6 px-5 align-self-center" style="max-width: 90%">
                     <h2 class="text-center fw-bold ">KERAJINAN</h2>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15822.567433307695!2d111.07704524068602!3d-7.504730830123148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1dfa259173b7%3A0x5027a76e355b4e0!2sKadipiro%2C%20Kec.%20Sambirejo%2C%20Kabupaten%20Sragen%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1689940957284!5m2!1sid!2sid"
+                        src="https://www.google.com/maps/d/embed?mid=1j1e3rGpIEwiFpJY0eDKpwmFTD0fpD5w&ehbc=2E312F"
                         width="100%" height="400" style="border:1px solid black;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <a href="https://goo.gl/maps/Fo3eA67Yw27cmP5P6" target="_blank">
+                    <a href="https://www.google.com/maps/d/u/0/edit?mid=1j1e3rGpIEwiFpJY0eDKpwmFTD0fpD5w&usp=sharing" target="_blank">
                         <button class="btn-bukapeta">
                             Buka Peta
                         </button>

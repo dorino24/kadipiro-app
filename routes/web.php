@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Models\galery;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +31,8 @@ Route::group([['middleware' => 'guest'],['middleware' => 'auth']], function () {
     Route::get('/umkm', [PostController::class, 'index_umkm']);
     Route::get('/umkm', [PostController::class, 'index_umkm']);
     Route::get('/artikel/{post}', [PostController::class,'showPost']);
+    Route::get('/galeryKKN', [GaleryController::class,'index_guest']);
+    Route::get('/register', function () {return view('admin.register');});
     
 });
 
@@ -36,5 +40,7 @@ Route::group([['middleware' => 'guest'],['middleware' => 'auth']], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::post('/logout', [UserController::class, 'logout'])->name('logout');
     Route::get('/dashboard', [PostController::class, 'index']);
+    Route::get('/dashboardGalery', [GaleryController::class, 'index']);
     Route::resource('/post', PostController::class);
+    Route::resource('/galery', GaleryController::class);
 });

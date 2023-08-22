@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\galery;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -17,16 +18,18 @@ class PostController extends Controller
     public function index_umkm()
     {
         return view('guest.umkm', [
-            'kuliner' => Post::where('category_id', 3)->get(),
-            'kerajinan' => Post::Where('category_id', 4)->get()
+            'kuliner' => Post::where('category_id', 5)->get(),
+            'kerajinan' => Post::Where('category_id', 6)->get()
         ]);
     }
 
     public function index_komoditas()
     {
         return view('guest.komoditas', [
-            'perikanan' => Post::where('category_id', 1)->get(),
-            'pertanian' => Post::Where('category_id', 2)->get()
+            'lele' => Post::where('category_id', 1)->get(),
+            'kambing' => Post::where('category_id', 2)->get(),
+            'sapi' => Post::where('category_id', 3)->get(),
+            'pertanian' => Post::Where('category_id', 4)->get()
         ]);
     }
     public function showPost(Post $post)
@@ -72,16 +75,18 @@ class PostController extends Controller
             // Unik dari tabel posts
             'category_id' => 'required',
             'harga' => 'required',
-            'nomor' => 'required',
             'alamat' => 'required',
-            'image' => 'image|file|max:4096|required',
-            'image2' => 'image|file|max:4096|required',
-            'image3' => 'image|file|max:4096|required',
-            'image4' => 'image|file|max:4096',
-            'image5' => 'image|file|max:4096',
-            'image6' => 'image|file|max:4096',
+            'image' => 'image|file|max:5000|required',
+            'image2' => 'image|file|max:5000|required',
+            'image3' => 'image|file|max:5000|required',
+            'image4' => 'image|file|max:5000',
+            'image5' => 'image|file|max:5000',
+            'image6' => 'image|file|max:5000',
             'isi' => 'required'
         ]);
+        $postValidated['wa']=$request->wa; 
+        $postValidated['facebook']=$request->facebook; 
+        $postValidated['ig'] = $request->ig;
         $postValidated['short'] = str_replace(' ', '-', $request->judul);
         if ($request->file('image')) {
             $postValidated['image'] = $request->file('image')->store('post-images');
@@ -139,7 +144,6 @@ class PostController extends Controller
             'judul' => 'required|max:255',
             'category_id' => 'required',
             'harga' => 'required',
-            'nomor' => 'required',
             'alamat' => 'required',
             'image' => 'image|file|max:4096',
             'image2' => 'image|file|max:4096',
@@ -150,6 +154,10 @@ class PostController extends Controller
             'isi' => 'required'
         ];
         $postValidated = $request->validate($rules);
+        
+        $postValidated['wa']=$request->wa; 
+        $postValidated['facebook']=$request->facebook; 
+        $postValidated['ig'] = $request->ig;    
         $postValidated['short'] = str_replace(' ', '-', $request->judul);
         if ($request->file('image')) {
             if ($post->image) {

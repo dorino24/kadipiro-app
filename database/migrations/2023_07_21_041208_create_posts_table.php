@@ -18,8 +18,10 @@ return new class extends Migration
             $table->string('short')->unique();
             $table->text('isi');
             $table->text('excerpt');
-            $table->string('harga');
-            $table->bigInteger('nomor');
+            $table->text('harga');
+            $table->bigInteger('wa');
+            $table->text('facebook')->nullable();
+            $table->text('ig')->nullable();
             $table->string('alamat');
             $table->string('image');
             $table->string('image2');

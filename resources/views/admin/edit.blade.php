@@ -2,7 +2,7 @@
 @section('content')
     <div class="container pt-5 mx-auto">
         <div class="d-flex justify-content-center align-items-center pt-3 pb-2 mb-3  text-center">
-            <h2>Buat Postingan Baru</h2>
+            <h2>Edit Postingan </h2>
         </div>
 
         <div class="col-lg-6 mx-auto">
@@ -37,17 +37,39 @@
                     @error('judul')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
-                </div><div class="mb-3">
-                    <label for="nomor" class="form-label @error('nomor') is-invalid @enderror"> Nomor </label>
+                </div>
+                <div class="mb-3">
+                    <label for="wa" class="form-label @error('wa') is-invalid @enderror"> WA </label>
                     <div class="form-control border border-0 p-0">
                         <input type="number" disabled value="+62" placeholder="+62" style="width: 11%">
-                        <input type="number" class="form-control" style="width:88%; display: inline;" id="nomor"
-                            name="nomor" required autofocus value="{{ old('nomor', $post->nomor)}}">
+                        <input type="number" class="form-control" style="width:88%; display: inline;" id="wa"
+                            name="wa" autofocus value="{{ old('wa', $post->wa) }}">
                     </div>
-                    @error('nomor')
+                    @error('wa')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
-                </div><div class="mb-3">
+                </div>
+                <div class="mb-3">
+                    <label for="facebook" class="form-label @error('facebook') is-invalid @enderror"> Link FB Profile </label>
+                    <div class="form-control border border-0 p-0">
+                        <input type="text" class="form-control" style="width:88%; display: inline;" id="facebook"
+                            name="facebook"  autofocus value="{{ old('facebook', $post->facebook) }}">
+                    </div>
+                    @error('facebook')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="mb-3">
+                    <label for="ig" class="form-label @error('ig') is-invalid @enderror"> Link IG Profile </label>
+                    <div class="form-control border border-0 p-0">
+                        <input type="text" class="form-control" style="width:88%; display: inline;" id="ig"
+                            name="ig"  autofocus value="{{ old('ig', $post->ig) }}">
+                    </div>
+                    @error('ig')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="mb-3">
                     <label for="alamat" class="form-label @error('alamat') is-invalid @enderror"> Alamat </label>
                     <input type="text" class="form-control" id="alamat" name="alamat" required autofocus
                         value="{{ old('alamat', $post->alamat) }}">
@@ -66,7 +88,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="image2" class="form-label @error('image2') is-invalid @enderror">Image 2 </label>
-                    <img src="{{ asset('storage/' . $post->image2) }}" class="img-preview2 img-fluid mb-2 col-sm-5 d-block">
+                    <img src="{{ asset('storage/' . $post->image2) }}"
+                        class="img-preview2 img-fluid mb-2 col-sm-5 d-block">
                     <input class="form-control @error('image2') is-invalid @enderror" type="file" id="image2"
                         name="image2" onchange="previewImage('#image2','.img-preview2')">
                     @error('image2')
@@ -120,9 +143,9 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-              
 
-                
+
+
                 <div class="mb-3">
                     <label for="isi" class="form-label"> isi </label>
                     @error('isi')
@@ -132,7 +155,7 @@
                     <trix-editor input="isi"></trix-editor>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Create Post</button>
+                <button type="submit" class="btn btn-primary">Edit Post</button>
             </form>
         </div>
     </div>

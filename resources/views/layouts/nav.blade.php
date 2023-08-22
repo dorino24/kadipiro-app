@@ -17,7 +17,9 @@
         </ul>
         <a href="/komoditas">Komoditas</a>
         <ul>
-            <li><a href="/komoditas#perikanan">Sektor Perikanan</a></li>
+            <li><a href="/komoditas#lele">Sektor Ternak Lele</a></li>
+            <li><a href="/komoditas#kambing">Sektor Ternak Kambing</a></li>
+            <li><a href="/komoditas#sapi">Sektor Ternak Sapi</a></li>
             <li><a href="/komoditas#pertanian">Sektor Pertanian</a></li>
         </ul>
         <a href="/umkm">UMKM</a>
@@ -25,6 +27,7 @@
             <li><a href="/umkm#kuliner">Bidang Kuliner</a></li>
             <li><a href="/umkm#kerajinan">Bidang Kerajinan</a></li>
         </ul>
+        <a href="/galeryKKN">Galery KKN</a>
         @if (auth()->check())
             <a href="/dashboard">Dashboard</a>
             <form action="/logout" method="post" class="ps-5">
@@ -49,8 +52,10 @@
         </span>
         <span class="dropdown-komoditas mx-2 d-flex align-items-center">
             <a href="/komoditas">Komoditas</a>
-            <div class="dropdown-content-komoditas">
-                <a href="/komoditas#perikanan">Sektor Perikanan</a>
+            <div class="dropdown-content-komoditas" style="width:210px">
+                <a href="/komoditas#lele" style="display: block" class="w-100">Sektor Ternak Lele</a>
+                <a href="/komoditas#kambing" style="display: block">Sektor Ternak Kambing</a>
+                <a href="/komoditas#sapi" style="display: block">Sektor Ternak Sapi</a>
                 <a href="/komoditas#pertanian">Sektor Pertanian</a>
             </div>
         </span>
@@ -61,6 +66,7 @@
                 <a href="/umkm#kerajinan">Bidang Kerajinan</a>
             </div>
         </span>
+        <a class="d-flex align-items-center" href="/galeryKKN" style="margin-right: 20px">Galery KKN</a>
         @if (auth()->check())
         <span class="mx-2 d-flex align-items-center">
             <a href="/dashboard">Dashboard</a>

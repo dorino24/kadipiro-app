@@ -37,13 +37,33 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="nomor" class="form-label @error('nomor') is-invalid @enderror"> Nomor WA </label>
+                    <label for="wa" class="form-label @error('wa') is-invalid @enderror"> WA (optional)</label>
                     <div class="form-control border border-0 p-0">
                         <input type="number" disabled value="+62" placeholder="+62" style="width: 11%">
-                        <input type="number" class="form-control" style="width:88%; display: inline;" id="nomor"
-                            name="nomor" required autofocus value="{{ old('nomor') }}">
+                        <input type="number" class="form-control" style="width:88%; display: inline;" id="wa"
+                            name="wa" autofocus value="{{ old('wa') }}">
                     </div>
-                    @error('nomor')
+                    @error('wa')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="mb-3">
+                    <label for="facebook" class="form-label @error('facebook') is-invalid @enderror"> Link FB Profile (optional) </label>
+                    <div class="form-control border border-0 p-0">
+                        <input type="text" class="form-control" style="width:88%; display: inline;" id="facebook"
+                            name="facebook"  autofocus value="{{ old('facebook') }}">
+                    </div>
+                    @error('facebook')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="mb-3">
+                    <label for="ig" class="form-label @error('ig') is-invalid @enderror"> Link IG Profile (optional) </label>
+                    <div class="form-control border border-0 p-0">
+                        <input type="text" class="form-control" style="width:88%; display: inline;" id="ig"
+                            name="ig"  autofocus value="{{ old('ig') }}">
+                    </div>
+                    @error('ig')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>

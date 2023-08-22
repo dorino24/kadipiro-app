@@ -15,17 +15,35 @@
             <div class="mx-auto px-5 col-8 mb-3">
                 <h2 class="fw-bold text-center">{{ $post->judul }}</h2>
                 <div class="isipost">{!! $post->isi !!}</div>
-                <a href="https://wa.me/{{$post->nomor}}">
-                  <img src="{{asset('img/logos_whatsapp-icon.png')}}" width="40" alt="">
-                </a>
+                <div class="mt-3">
+                    @if ($post->wa != null)
+                        <a href="https://wa.me/{{ $post->wa }}" target="_blank" class="mx-2">
+                            <i class="bi bi-whatsapp fs-4"></i>
+                        </a>
+                    @endif
+                    @if ($post->facebook != null)
+                        <a href="//{{ $post->facebook }}" target="_blank" class="mx-2">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                    @endif
+                    @if ($post->ig != null)
+                        <a href="//{{ $post->ig }}" target="_blank" class="mx-2">
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                    @endif
+                </div>
             </div>
             <div class="mx-auto px-5 col-8 col-lg-4 ">
                 <h2 class="fw-bold text-center">KETERANGAN</h2>
                 <dl>
-                  <dt><li>Harga</li></dt>
-                  <dd class="ps-4">{{$post->harga}}</dd>
-                  <dt><li>Alamat</li> </dt>
-                  <dd class="ps-4">{{$post->alamat}}</dd>
+                    <dt>
+                        <li>Harga</li>
+                    </dt>
+                    <dd class="ps-4">{{ $post->harga }}</dd>
+                    <dt>
+                        <li>Alamat</li>
+                    </dt>
+                    <dd class="ps-4">{{ $post->alamat }}</dd>
                 </dl>
             </div>
         </div>

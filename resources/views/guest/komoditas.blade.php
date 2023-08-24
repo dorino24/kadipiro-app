@@ -17,14 +17,14 @@
         <div class="overlay">
             <h1 class="fw-bold"> KOMODITAS </h1>
             <div style="width: 40%">
-                <h4 class="mt-5">Memberdayakan komoditas utama Desa Kadipiro dalam sektor pertanian dan perikanan</h4>
+                <h4 class="mt-5">Memberdayakan komoditas utama Desa Kadipiro dalam sektor perikanan, peternakan, dan pertanian </h4>
             </div>
         </div>
     </div>
 
     <div class="row space " id="lele">
         <div class="kotak-krem hideme">
-            <h1 class="fw-bold text-center py-4">Ternak Lele</h1>
+            <h1 class="fw-bold text-center py-4">TERNAK LELE</h1>
         </div>
         <div class="container my-5 hideme">
             <div class="row">
@@ -49,7 +49,7 @@
     </div>
     <div class="row space " id="kambing">
         <div class="kotak-krem hideme">
-            <h1 class="fw-bold text-center py-4">Ternak Kambing</h1>
+            <h1 class="fw-bold text-center py-4">TERNAK KAMBING</h1>
         </div>
 
         <div class="container my-5 hideme">
@@ -76,7 +76,7 @@
     </div>
     <div class="row space " id="sapi">
         <div class="kotak-krem hideme">
-            <h1 class="fw-bold text-center py-4">Ternak Sapi</h1>
+            <h1 class="fw-bold text-center py-4">TERNAK SAPI</h1>
         </div>
 
         <div class="container my-5 hideme">

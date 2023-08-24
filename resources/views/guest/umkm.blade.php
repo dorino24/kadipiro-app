@@ -4,11 +4,11 @@
     <div class="judul">
         <div class="row">
             <div class="col-6 p-0">
-                <div class="jumbotron-kiri" style="background-image: url('../img/mie.png')";>
+                <div class="jumbotron-kiri" style="background-image: url('../img/kayu.jpg')";>
                 </div>
             </div>
             <div class="col-6 p-0">
-                <div class="jumbotron-kanan" style="background-image: url('../img/kayu.png')";>
+                <div class="jumbotron-kanan" style="background-image: url('../img/mie.jpg')";>
                 </div>
             </div>
         </div>
@@ -16,8 +16,8 @@
         <div class="overlay">
             <h1 class="fw-bold"> UMKM </h1>
             <div style="width: 40%">
-                <h4 class="mt-5">Mengembangkan UMKM untuk meningkatkan ekonomi masyarakat di Desa Kadipiro di bidang
-                    kuliner dan bidang kerajinan</h4>
+                <h4 class="mt-5">Mengembangkan UMKM untuk meningkatkan ekonomi masyarakat Desa Kadipiro dalam bidang
+                    kuliner dan kerajinan</h4>
             </div>
         </div>
     </div>

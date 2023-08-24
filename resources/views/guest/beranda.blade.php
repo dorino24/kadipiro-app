@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="judul ">
-    <div class="jumbotron" style="background-image: url('../img/jumbotron.png');">
+    <div class="jumbotron" style="background-image: url('../img/jumbotron.jpg');">
     </div>
     {{-- <img class="jumbotron" src="img/jumbotron.png" alt="jumbotron"> --}}
     <div class="overlay">

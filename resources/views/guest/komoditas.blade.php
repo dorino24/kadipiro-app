@@ -5,7 +5,7 @@
     <div class="judul ">
         <div class="row ">
             <div class="col-6 p-0">
-                <div class="jumbotron-kiri" style="background-image: url('../img/padi.png')";>
+                <div class="jumbotron-kiri" style="background-image: url('../img/sapi.jpg')";>
                 </div>
             </div>
             <div class="col-6 p-0">

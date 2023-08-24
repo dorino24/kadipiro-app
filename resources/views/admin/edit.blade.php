@@ -52,7 +52,7 @@
                 <div class="mb-3">
                     <label for="facebook" class="form-label @error('facebook') is-invalid @enderror"> Link FB Profile </label>
                     <div class="form-control border border-0 p-0">
-                        <input type="text" class="form-control" style="width:88%; display: inline;" id="facebook"
+                        <input type="text" class="form-control"  id="facebook"
                             name="facebook"  autofocus value="{{ old('facebook', $post->facebook) }}">
                     </div>
                     @error('facebook')
@@ -62,7 +62,7 @@
                 <div class="mb-3">
                     <label for="ig" class="form-label @error('ig') is-invalid @enderror"> Link IG Profile </label>
                     <div class="form-control border border-0 p-0">
-                        <input type="text" class="form-control" style="width:88%; display: inline;" id="ig"
+                        <input type="text" class="form-control"  id="ig"
                             name="ig"  autofocus value="{{ old('ig', $post->ig) }}">
                     </div>
                     @error('ig')

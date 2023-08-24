@@ -84,7 +84,7 @@ class PostController extends Controller
             'image6' => 'image|file|max:5000',
             'isi' => 'required'
         ]);
-        $postValidated['wa']=$request->wa; 
+        $postValidated['wa']='+62'.$request->wa; 
         $postValidated['facebook']=$request->facebook; 
         $postValidated['ig'] = $request->ig;
         $postValidated['short'] = str_replace(' ', '-', $request->judul);
@@ -155,7 +155,7 @@ class PostController extends Controller
         ];
         $postValidated = $request->validate($rules);
         
-        $postValidated['wa']=$request->wa; 
+        $postValidated['wa']='+62'.$request->wa; 
         $postValidated['facebook']=$request->facebook; 
         $postValidated['ig'] = $request->ig;    
         $postValidated['short'] = str_replace(' ', '-', $request->judul);

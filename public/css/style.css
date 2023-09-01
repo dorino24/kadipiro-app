@@ -12,6 +12,12 @@
     * {
         font-size: 12px;
     }
+    #video_div{
+        width: 100% !important;
+    }
+    .galery_beranda{
+        width: 75% !important;
+    }
 }
 
 body {
@@ -204,8 +210,8 @@ nav li {
 }
 
 .space {
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .card {
@@ -247,9 +253,9 @@ nav li {
         width: 100%;
         /* padding: 10px !important; */
     }
-    
+
     .row h3 {
-        text-align: center ;
+        text-align: center;
     }
     .space {
         margin-top: 50px;
@@ -262,18 +268,19 @@ nav li {
     background: #e5d9b6;
 }
 
-
-
 /* dashboard */
 table {
     border-collapse: collapse;
     width: 100%;
 }
-table, th, td {
+table,
+th,
+td {
     border: 1px solid black;
     text-align: center;
 }
-th, td {
+th,
+td {
     padding: 10px;
 }
 th {
@@ -281,24 +288,24 @@ th {
     color: white;
 }
 
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
 
 /* search */
 
-
 #search {
-   
     border-radius: 5px;
-    border: 1px solid rgb(0, 0, 0,0.1);
+    border: 1px solid rgb(0, 0, 0, 0.1);
 }
-#search input{
+#search input {
     padding-left: 20px;
     border-radius: 5px;
-    border: 1px solid rgb(0, 0, 0,0.1);
+    border: 1px solid rgb(0, 0, 0, 0.1);
 }
 
 /* tambah */
-.tambah-btn{
+.tambah-btn {
     background-color: #5f8d4e;
     color: white;
     border-radius: 10px;
@@ -315,18 +322,53 @@ th {
     color: white;
 }
 
-
-.hideme
-{
-    opacity:0;
-    transition: all 1s ease; 
+.hideme {
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .showme {
-  opacity:1!important;
-  transition: all 1s ease; 
+    opacity: 1 !important;
+    transition: all 1s ease;
 }
 
-.isipost>div{
+.isipost > div {
     text-align: justify;
+}
+
+.vidcon {
+    position: relative;
+}
+
+video {
+    width: 80%;
+    object-fit: cover;
+}
+.buttonPlay {
+    background-color: transparent;
+    border: medium none;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    left: 0;
+    margin: 0 auto;
+    padding: 8px 16px;
+    position: absolute;
+    right: 0;
+    top: 35%;
+    width: 20%;
+    z-index: 99;
+}
+.buttonPlay.active img {
+    opacity: 0.05;
+}
+.buttonPlay.active:hover img {
+    opacity: 0.3;
+}
+
+#video_div{
+    width: 75%;
+}
+.galery_beranda{
+    width: 30%;
 }
